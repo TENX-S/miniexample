@@ -25,11 +25,6 @@ class App extends StatelessWidget {
       lazy: false,
       create: (_) => SettingsCubit(),
       child: BlocBuilder<SettingsCubit, Settings>(
-        // buildWhen: (prev, curr) {
-        //   print('prev: ${prev.alwaysOnTop}');
-        //   print('curr: ${curr.alwaysOnTop}');
-        //   return prev != curr;
-        // },
         builder: (context, settings) {
           print('build ${settings.alwaysOnTop}');
           return MaterialApp(
